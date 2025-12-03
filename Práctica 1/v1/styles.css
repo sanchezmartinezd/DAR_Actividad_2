@@ -1,0 +1,302 @@
+/* body */
+body {
+    background-image: url('./background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* HEADER */
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 4.5em;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    padding: 0.8em 1.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* main */
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#primera-entrada > * {
+    margin: 0.2em;
+}
+
+#primera-entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+    margin-bottom: 3em;
+    color: white;
+    text-align: center;
+}
+
+/* Películas */
+.pelicula-entry {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    margin-bottom: 4em;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.layout-left {
+    flex-direction: row;
+}
+
+.layout-right {
+    flex-direction: row-reverse;
+}
+
+.pelicula-content {
+    flex: 1;
+    color: white;
+}
+
+.pelicula-content h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.pelicula-content p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.pelicula-image {
+    flex: 0 0 400px;
+}
+
+.pelicula-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Comentarios */
+#comentarios-section {
+    margin-top: 4em;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+#comentarios-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#comentarios-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+#comentarios-form input,
+#comentarios-form textarea {
+    padding: 0.8em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#comentarios-form input::placeholder,
+#comentarios-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#comentarios-form button {
+    padding: 0.8em 1.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#comentarios-form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#comentarios-lista {
+    margin-top: 2em;
+}
+
+.comentario-item {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.comentario-autor {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.comentario-texto {
+    line-height: 1.5;
+}
+
+.no-comentarios {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: rgba(30, 30, 30, 0.95);
+    margin: 15% auto;
+    padding: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    color: white;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pelicula-entry,
+    .layout-left,
+    .layout-right {
+        flex-direction: column !important;
+    }
+    
+    .pelicula-image {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+/* footer */
+footer {
+    background-color: black;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 2em;
+    padding: 1em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

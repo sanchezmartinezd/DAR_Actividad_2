@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog - David Sánchez</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="primera-entrada">
+            <h2>PELÍCULAS</h2>
+            <p>Aquí encontrarás mis películas favoritas y algunas de las más populares</p>
+        </section>
+        <div class="contenedor-boton-nueva-entrada">
+            <button id="btn-nueva-entrada">Añadir nueva entrada</button>
+        </div>
+        <div id="entradas-container">
+            <article class="entrada-pelicula contenido-derecha">
+                <div class="contenido-pelicula">
+                    <h3>Dune: Parte Dos</h3>
+                    <p>Dune: Parte Dos sigue a Paul Atreides y Lady Jessica mientras intentan integrarse a los Fremen en el planeta Arrakis. Después de la devastación de la Casa Atreides, Paul se enfrenta a una elección entre el amor de su vida y el destino del universo, mientras busca venganza contra los conspiradores que destruyeron a su familia. La película explora temas de poder, religión y la profecía de Paul como el mesías, manteniendo la calidad técnica y narrativa de la primera parte.</p>
+                </div>
+                <div class="imagen-pelicula">
+                    <img src="./imagenes/dune_peli.jpg" alt="Dune Parte Dos">
+                </div>
+            </article>
+            <article class="entrada-pelicula contenido-izquierda">
+                <div class="imagen-pelicula">
+                    <img src="./imagenes/avatar_peli.jpg" alt="Avatar">
+                </div>
+                <div class="contenido-pelicula">
+                    <h3>Avatar</h3>
+                    <p>Jake Sully, un ex-marine parapléjico, se une a un programa de colonización en Pandora, donde se le asigna un avatar para sobrevivir en su nuevo entorno. A lo largo de la película, Jake aprende sobre la cultura Na'vi y se une a la resistencia contra la RDA, convirtiéndose en un héroe que protege su tierra y sus vidas</p>
+                </div>
+            </article>
+            <article class="entrada-pelicula contenido-derecha">
+                <div class="contenido-pelicula">
+                    <h3>The Batman</h3>
+                    <p>La película se desarrolla en un Gotham City brutal y corrupto, donde Bruce Wayne (Robert Pattinson) ha estado operando como Batman durante dos años. La historia comienza con una serie de asesinatos rituales que apuntan a la élite de la ciudad, perpetrados por el villano conocido como El Acertijo. Este personaje, interpretado por Paul Dano, deja pistas macabras que Batman debe resolver, lo que lo lleva a una profunda investigación sobre la corrupción en Gotham.</p>
+                </div>
+                <div class="imagen-pelicula">
+                    <img src="./imagenes/batman_peli.jpg" alt="The Batman">
+                </div>
+            </article>
+        </div>
+        <section id="comentarios-section">
+            <h3>Deja tu comentario</h3>
+            <form id="comentarios-form">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <textarea id="comentario" placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                <button type="submit">Enviar comentario</button>
+            </form>
+        </section>
+        <section id="comentarios-lista">
+            <h3>Comentarios</h3>
+            <div id="lista-comentarios"></div>
+        </section>
+    </main>
+    <div id="modal-sobre-mi" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span> <!-- este boton cierra el modal y contiene un simbolo -->
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es David Sánchez y en este blog encontrarás mis reseñas y opiniones sobre mis películas favoritas</p>
+        </div>
+    </div>
+    <div id="modal-nueva-entrada" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-entrada">&times;</span>
+            <h2>Nueva entrada de pelicula</h2>
+            <form id="form-nueva-entrada">
+                <input type="text" id="titulo-pelicula" placeholder="Título de la película" required>
+                <textarea id="descripcion-pelicula" placeholder="Descripción de la película..." rows="4" required></textarea>
+                <input type="url" id="url-imagen" placeholder="URL de la imagen" rquired>
+                <button type="submit">Publicar Entrada</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; David Sánchez</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog - David Sánchez</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="primera-entrada">
+            <h2>PELÍCULAS TENDENCIA 2025</h2>
+            <p>Aquí encontrarás las películas más esperadas y populares del año 2025.</p>
+        </section>
+
+        <!-- Película 1: Texto izquierda, imagen derecha -->
+        <article class="pelicula-entry layout-left">
+            <div class="pelicula-content">
+                <h3>Dune: Parte Tres</h3>
+                <p>La épica saga continúa con Paul Atreides consolidando su poder en el universo. Una batalla final por el destino de la humanidad se avecina mientras las fuerzas del emperador y las casas nobles se enfrentan en Arrakis. Acción, drama y efectos visuales impresionantes en esta esperada conclusión de la trilogía.</p>
+            </div>
+            <div class="pelicula-image">
+                <img src="https://via.placeholder.com/400x500/1a1a2e/ffffff?text=Dune+3" alt="Dune Parte Tres">
+            </div>
+        </article>
+
+        <!-- Película 2: Texto derecha, imagen izquierda -->
+        <article class="pelicula-entry layout-right">
+            <div class="pelicula-image">
+                <img src="https://via.placeholder.com/400x500/2e1a1a/ffffff?text=Avatar+3" alt="Avatar 3">
+            </div>
+            <div class="pelicula-content">
+                <h3>Avatar: El Sembrador de Fuego</h3>
+                <p>Jake Sully y Neytiri regresan para proteger Pandora de una nueva amenaza que pone en peligro no solo a los Na'vi, sino a todo el ecosistema del planeta. Con nuevas tribus por descubrir y tecnología aún más avanzada, esta tercera entrega promete superar a sus predecesoras en espectacularidad visual y emocional.</p>
+            </div>
+        </article>
+
+        <!-- Película 3: Texto izquierda, imagen derecha + comentarios -->
+        <article class="pelicula-entry layout-left">
+            <div class="pelicula-content">
+                <h3>The Batman: Parte II</h3>
+                <p>El Caballero Oscuro se enfrenta a nuevos villanos en Gotham City. Matt Reeves regresa para dirigir esta secuela oscura y noir que explora más a fondo la psicología de Bruce Wayne y su cruzada contra el crimen organizado. Con la aparición del Joker, la tensión alcanza niveles sin precedentes.</p>
+            </div>
+            <div class="pelicula-image">
+                <img src="https://via.placeholder.com/400x500/1a2e1a/ffffff?text=Batman+2" alt="The Batman 2">
+            </div>
+        </article>
+
+        <!-- Sección de comentarios -->
+        <section id="comentarios-section">
+            <h3>Déjanos tu comentario</h3>
+            <form id="comentarios-form">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <textarea id="comentario" placeholder="Escribe tu comentario..." rows="4" required></textarea>
+                <button type="submit">Enviar comentario</button>
+            </form>
+            <div id="comentarios-lista">
+                <p class="no-comentarios">Aún no hay comentarios. ¡Sé el primero en comentar!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Sobre Mí -->
+    <div id="modal-sobre-mi" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sobre Mí</h2>
+            <p>Soy David Sánchez, un apasionado del cine y las nuevas tendencias cinematográficas. En este blog comparto mis reseñas y opiniones sobre las películas más esperadas del año.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 David Sánchez</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
