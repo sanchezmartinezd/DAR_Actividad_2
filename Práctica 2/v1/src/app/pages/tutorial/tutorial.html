@@ -1,0 +1,160 @@
+<section class="tutorial">
+  <h2>Creación y estructura básica de un proyecto Angular</h2>
+  <p>
+    En esta sección se explica cómo crear un nuevo proyecto con Angular CLI,
+    qué opciones aparecen al ejecutar el comando <b>ng new</b> y cómo se ha organizado
+    esta práctica para convertirla en una aplicación de tipo SPA (Single Page Application)
+    con varias páginas: Inicio, Instalación, Tutorial y Funcionamiento.
+  </p>
+
+  <h3>1. Crear un nuevo proyecto con Angular CLI</h3>
+
+  <p>
+    Una vez instalado el entorno, el primer paso para comenzar a trabajar con Angular es crear un proyecto nuevo.
+    Para ello, se utiliza el siguiente comando desde la terminal:
+  </p>
+
+  <p><b>ng new practica2-dsanchez</b></p>
+
+  <br>
+
+  <p>
+    El nombre del proyecto puede ser cualquiera (por ejemplo proyecto-prueba), pero en esta práctica
+    se ha utilizado <strong>practica2-dsanchez</strong>.
+  </p>
+
+  <br>
+
+  <p>Al ejecutar este comando, Angular CLI hace varias preguntas:</p>
+
+  <ul>
+    <li>
+      <strong>¿Quieres añadir routing (enrutamiento)?</strong><br>
+      En esta práctica se ha elegido <strong>Yes</strong>, para poder crear una SPA con varias páginas
+      (Inicio, Instalación, Tutorial, Funcionamiento).
+    </li>
+    <li>
+      <strong>¿Qué tipo de hojas de estilo deseas utilizar?</strong><br>
+      Se ha seleccionado <strong>CSS</strong>, aunque también se podrían usar otras sin ningun tipo de problema.
+    </li>
+    <li>
+      <strong>¿Enable Server-Side Rendering (SSR) / SSG?</strong><br>
+      Para un proyecto básico y de aprendizaje se ha respondido <strong>No</strong>, ya que añade complejidad
+      innecesaria.
+    </li>
+  </ul>
+
+  <br>
+
+  <p>
+    Tras responder a estas preguntas, Angular CLI genera automáticamente la estructura inicial del proyecto.
+  </p>
+
+  <h3>2. Estructura básica de un proyecto Angular</h3>
+
+  <p>
+    Una vez creado el proyecto, la estructura de carpetas más importante es la siguiente:
+  </p>
+
+  <ul>
+    <li>
+      <b>src/</b>: carpeta principal del código fuente de la aplicación.
+    </li>
+    <li>
+      <b>src/app/</b>: contiene la lógica principal de la aplicación (componentes, rutas, etc.).
+    </li>
+    <li>
+      <b>src/app/app.ts</b>: componente raíz de la aplicación (<b>App</b>), donde se define el
+      <b>selector</b>, la plantilla principal (<b>app.html</b>) y los estilos (<b>app.css</b>).
+    </li>
+    <li>
+      <b>src/app/app.routes.ts</b>: archivo donde se configuran las rutas de la aplicación para poder
+      navegar entre las distintas páginas sin recargar el navegador.
+    </li>
+    <li>
+      <b>src/styles.css</b>: hoja de estilos globales que afecta a toda la aplicación.
+    </li>
+    <li>
+      <b>src/main.ts</b>: punto de entrada donde se arranca la aplicación Angular.
+    </li>
+  </ul>
+
+  <p>
+    Esta estructura se genera automáticamente con <b>ng new</b>, por lo que el desarrollador puede empezar
+    a trabajar directamente sin tener que crear estos archivos a mano.
+  </p>
+
+  <h3>3. Ejecutar el proyecto por primera vez</h3>
+
+  <p>
+    Una vez generado el proyecto, el siguiente paso es ejecutarlo para comprobar que todo funciona
+    correctamente. Para ello, se accede a la carpeta del proyecto y se lanza el servidor de desarrollo:
+  </p>
+
+  <p><b>cd practica2-dsanchez</b></p>
+  <p><b>ng serve --open</b></p>
+
+  <br>
+
+  <p>
+    El parámetro <b>--open</b> hace que el navegador se abra automáticamente en la dirección
+    <b>http://localhost:4200</b>. Si todo está correcto, se mostrará la página inicial de Angular.
+  </p>
+
+  <h3>4. Creación de las páginas del tutorial</h3>
+
+  <p>
+    Para esta práctica se han creado varias páginas (componentes) utilizando Angular CLI, de forma que cada
+    una corresponde a un apartado del tutorial:
+  </p>
+
+  <p><b>ng generate component pages/inicio --standalone</b></p>
+  <p><b>ng generate component pages/instalacion --standalone</b></p>
+  <p><b>ng generate component pages/tutorial --standalone</b></p>
+  <p><b>ng generate component pages/funcionamiento --standalone</b></p>
+
+  <br>
+
+  <p>
+    Cada uno de estos comandos crea un componente standalone dentro de la carpeta <b>src/app/pages/</b>,
+    con sus propios archivos de TypeScript, HTML y CSS.
+  </p>
+
+  <p>
+    En esta práctica, cada componente representa una sección del tutorial: la página de Inicio, la instalación,
+    la explicación general del proyecto (esta página de "Tutorial") y el funcionamiento del framework.
+  </p>
+
+  <h3>5. Configuración de las rutas (SPA)</h3>
+
+  <p>
+    Para que la aplicación funcione como una SPA y pueda cambiar de página sin recargar el navegador,
+    se han definido rutas en el archivo <b>app.routes.ts</b>. Un ejemplo simplificado sería:
+  </p>
+
+  <div class="captura-contenedor">
+    <img src="/3ejrutas.jpg">
+  </div>
+
+  <p>
+    Gracias a estas rutas, al pulsar en los botones del menú superior la aplicación muestra el componente
+    correspondiente sin recargar toda la página.
+  </p>
+
+  <h3>6. Navegación con <b>routerLink</b> y <b>router-outlet</b></h3>
+
+  <p>
+    Para mostrar las diferentes páginas en la plantilla principal se utiliza la etiqueta
+    <b>router-outlet</b> dentro de <b>app.html</b>, que actúa como un contenedor donde Angular
+    va cargando cada componente según la ruta actual.
+  </p>
+
+  <p>
+    En el menú de navegación se usan directivas <b>routerLink</b> para cambiar de ruta:
+  </p>
+
+  <div class="captura-contenedor">
+    <img src="/4ejrutas.jpg">
+  </div>
+
+</section>
